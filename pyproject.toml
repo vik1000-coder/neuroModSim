@@ -1,0 +1,21 @@
+[project]
+name = "neuromodsim"
+version = "0.1.0"
+description = "Synthetic testbed for recovering unobserved neuromodulator effects from activity."
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26", "matplotlib>=3.8"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+dashboard = ["streamlit>=1.37"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["neuromodsim*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
